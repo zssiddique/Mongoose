@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+    <style>
+      body { background-color: #F2F6D0 }
+      #wrapper {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+      }
+      #articles {
+        display: inline-block;
+        overflow: auto;
+        width: 60%;
+        height: 700px;
+      }
+      #notes {
+        float: right;
+        width: 30%;
+      }
+      textarea, input {
+        display: block;
+        width: 100%;
+        background-color: #FCF5C7;
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+      textarea {
+        height: 200px;
+        font-size: 18px;
+      }
+    </style>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Mongo Scraper Jumbotron -->
+      <div class="jumbotron" style="background-color: rgb(211, 195, 52); color: white;">
+        <div class="container">
+          <h1 class="text-center">
+            <strong>Stack Overflow Scraper</strong>
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Articles -->
+        <div class="col-lg-8">
+      
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title text-center">Top Questions</h3>
+            </div>
+            <div class="panel-body text-center">
+              <div id="articles"></div>
+            </div>
+        </div>
+        
+      
+        </div>
+        <div class="col-lg-4">
+        
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title text-center">Keep Notes</h3>
+            </div>
+            <div class="panel-body text-center">
+              <div id="notes"></div>
+            </div>
+          </div>
+        
+        
+        </div>
+      
+      
+      </div>
+      
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
